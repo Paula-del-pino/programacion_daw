@@ -16,11 +16,10 @@ public class Etapavital {
 		 */
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Introduce tu año de Nacimiento:");
-		String nombre = scan.nextLine();
 		int anioNacimiento = scan.nextInt();
 		int edad = 2024 - anioNacimiento;
 		if (edad < 0) {
-			System.err.print("No se puede introducir un año:");
+			System.err.print("No se puede introducir un año");
 		} else if (edad <= 2) {
 			System.out.println("Eres un bebé");
 		} else if (edad < 12){
