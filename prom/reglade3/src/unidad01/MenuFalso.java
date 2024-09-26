@@ -24,6 +24,9 @@ public class MenuFalso {
 		System.out.println("3.Copiar archivo");
 		System.out.println("4.Cerrar programa");
 		int opcion = scan.nextInt();
+		if (opcion == 0) {
+			System.err.print("Error error, porfavor elige una opción");
+		}
 		if (opcion == 1) {
 			System.out.print("Comprimiendo archivo...");
 		} else if (opcion == 2) {
