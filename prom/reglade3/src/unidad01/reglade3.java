@@ -28,8 +28,6 @@ public class reglade3 {
 		System.out.print (c);
 		System.out.print("--->");
 		System.out.print(x); 
-		} else {
-		System.out.println("""\nLa regla d 3 introducida no es correcta)
 		scan.close();
 	}
 
