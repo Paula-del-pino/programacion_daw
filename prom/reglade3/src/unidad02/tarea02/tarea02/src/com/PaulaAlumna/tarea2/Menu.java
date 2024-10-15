@@ -44,9 +44,19 @@ public class Menu {
 			int resultado = numero1 - numero2;
 			System.out.print("La resta de " + numero1 + " y de " + numero2 + " da: " + resultado);
 		} else if (opcion == 3){
-			System.out.println("Multiplicación");
+			System.out.print("Introduce el primer número");
+			int numero1 = scan.nextInt();
+			System.out.print("Introduce el segundo número");
+			int numero2 = scan.nextInt();
+			int resultado = numero1 * numero2;
+			System.out.print(numero1 + " x " + numero2 + " = " + resultado);
 		} else if (opcion == 4){
-			System.out.println("División");
+			System.out.print("Introduce el primer número");
+			int numero1 = scan.nextInt();
+			System.out.print("Introduce el segundo número");
+			int numero2 = scan.nextInt();
+			int resultado = numero1 / numero2;
+			System.out.print(numero1 + " : " + numero2 + " = " + resultado);
 		} else if (opcion == 5) {
 			System.out.println("Raíz cuadrada");
 		} else if (opcion == 6) {
