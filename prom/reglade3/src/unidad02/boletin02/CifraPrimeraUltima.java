@@ -1,4 +1,4 @@
-package unidad02;
+package unidad02.boletin02;
 
 import java.util.Scanner;
 
@@ -18,15 +18,18 @@ public class CifraPrimeraUltima {
 		System.out.println("Elige una opción:");
 		System.out.println("1. Primera cifra:");
 		System.out.println("2. Última cifra:");
-		int opcion = scan.nextInt();
-		switch (opcion) {
+		boolean correcto = true;
+		do {
+			int opcion = scan.nextInt();
+			switch (opcion) {
 		case 1:
-		// Obtine la primera cifra del numero
+		// Ob             tine la primera cifra del numero
 			int dividendo = numero;
 			int primeraCifra = 0;
 			while (dividendo != 0) {
+				primeraCifra = dividendo;
 				//dividendo = dividendo / 10;
-			primeraCifra = dividendo;	
+				
 			dividendo /= 10;	
 			}
 			System.out.println("La primera cifra del número " + numero + " es " + primeraCifra);
@@ -41,11 +44,16 @@ public class CifraPrimeraUltima {
 		default:
 
 		// no se ha introducido ni 1 ni 2
-		System.err.println("No has elegido ninguna opción válidad!");
+		correcto = false;
+		System.out.println("No has elegido ninguna opción válidad!");
 		break;
 	}
 		
-		scan.close();
+		
+				
+			} while (!correcto);
+	
+	scan.close();
 		
 
 	}
