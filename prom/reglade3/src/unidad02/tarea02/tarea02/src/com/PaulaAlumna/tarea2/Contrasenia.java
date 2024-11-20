@@ -7,6 +7,7 @@ public class Contrasenia {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
+		// Contrasenia = contrasenia123
 		String contrCorrecta = "contrasenia123";
 		
 		// 3 Intentos de contraseña max
@@ -17,7 +18,7 @@ public class Contrasenia {
 		// Aquí abajo escribiré el bucle de 3 intentos
 		// Pedimos al usuario la contraseña
 		
-		while (intentos < intentosMax && !contrCorrectIntroducida) {
+		while ( intentos <  intentosMax  && !contrCorrectIntroducida) {
 			System.out.println("Introduce tu contraseña: ");
 			String contrIntroducida = scan.nextLine();
 			if (contrIntroducida.equals(contrCorrecta)) {

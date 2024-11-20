@@ -6,7 +6,7 @@ public class MayorNumerode3 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Est programa devuelve el mayor de tres números introducidos");
+		System.out.println("Este programa devuelve el mayor de tres números introducidos");
 		System.out.print("Introduce el primer número");
 		int numero1 = scan.nextInt();
 		System.out.print("\nIntroduce el segundo número");

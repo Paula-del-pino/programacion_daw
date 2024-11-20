@@ -16,10 +16,10 @@ public class Act3 {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Introduce números que sean positivos hasta llegar a 0");
 		int numero;
-		int numMayor = Integer.MAX_VALUE;
-		int numMenor = Integer.MIN_VALUE;
+		int numMayor = Integer.MIN_VALUE;
+		int numMenor = Integer.MAX_VALUE;
 		int suma = 0;
-		int contador =0;
+		int contador = 0;
 		while (true) {
 			numero = scan.nextInt();
 			
@@ -46,9 +46,8 @@ public class Act3 {
 			System.out.println("El número Mayor introducido es: " + numMayor);
 			System.out.println("El número Menor introducido es: " + numMenor);
 			System.out.println("Todos los números suman: " + suma);
-			System.out.println("Media arimétrica de tods los números: " + media);
-		} else {
-			System.out.println("Error. No introdujo números positivos");
+			System.out.println("Media arimétrica de todos los números: " + media);
+		
 		}
 		
 		scan.close();

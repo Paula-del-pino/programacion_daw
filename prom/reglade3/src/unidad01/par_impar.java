@@ -10,7 +10,7 @@ public class par_impar {
 		System.out.print("Introduce un número entero y veremos si es par o impar");
 		int numero = scan.nextInt();
 		String paridad;
-		paridad = numero % 2 == 0 ? "par" : "impar";
+		paridad = numero % 2 == 0 ? "PAR" : "IMPAR";
 		System.out.println("El número introducido es " + paridad);
 		scan.close();
 		

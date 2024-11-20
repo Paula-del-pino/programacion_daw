@@ -27,7 +27,7 @@ public class Menu {
 		System.out.println("5 - Raíz cuadrada");
 		System.out.println("6 – Potencia");
 		System.out.println("0 - Salir del programa");
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		if (scan.hasNext()) {
 			opcion = scan.nextInt();
 			switch (opcion) {
@@ -39,6 +39,7 @@ public class Menu {
         		int numero2 = scan.nextInt();
         		int resultado = numero1 + numero2;
         		System.out.print("La suma de " + numero1 + " y de " + numero2 + " da: " + resultado);
+        		System.out.println("");
         		break;
         	} 
         	case 2: {
@@ -49,6 +50,7 @@ public class Menu {
         		int numero2 = scan.nextInt();
         		int resultado = numero1 - numero2;
         		System.out.print("La resta de " + numero1 + " y de " + numero2 + " da: " + resultado);
+        		System.out.println("");
         		break;
         	} 
         	case 3: {
@@ -59,6 +61,7 @@ public class Menu {
         		int numero2 = scan.nextInt();
         		int resultado = numero1 * numero2;
         		System.out.print(numero1 + " x " + numero2 + " = " + resultado);
+        		System.out.println("");
         		break;
         	}
         	case 4: {
@@ -72,6 +75,7 @@ public class Menu {
         		System.out.print(numero1 + " : " + numero2 + " = " + resultado);
         		 } else {
                      System.out.println("Error.No se puede dividir por cero.");
+                     System.out.println("");
                  } break;
         	} 
         	case 5: {
@@ -82,6 +86,7 @@ public class Menu {
         			System.out.println("Solución: " + Math.sqrt(numRaiz));
         		} else {
         			System.out.println("Error");
+        			System.out.println("");
         		}
         		break;
         	} 
@@ -92,6 +97,7 @@ public class Menu {
         		System.out.println("Introduce el exponente: ");
         		double expo = scan.nextDouble();
         		System.out.println("Solución: " + Math.pow(base, expo));
+        		System.out.println("");
         		break;
         	} case 0: {
         		// Salir del Programa
@@ -99,6 +105,7 @@ public class Menu {
         		scan.nextLine();
         		scan.nextLine();
         		System.out.println("Cerrando programa...");
+        		System.out.println("");
         		break;
         	}
         		default: {
@@ -115,4 +122,4 @@ public class Menu {
 		} while (opcion != 0);
 		scan.close();
 	}
-}
+}   
