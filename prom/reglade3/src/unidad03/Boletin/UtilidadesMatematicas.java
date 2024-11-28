@@ -2,6 +2,8 @@ package unidad03.Boletin;
 
 public class UtilidadesMatematicas {
 
+	private static final String StringUtils = null;
+
 	/**
 	 * Devuelve true si el número pasado por parámetro es primo
 	 * 
@@ -143,6 +145,13 @@ public class UtilidadesMatematicas {
 		} return posicion;
 	}
 	
+	public static int contarPalabras(String cadena) {
+		int palabras =0;
+	
+		return palabras;
+		
+		
+	}
 
 
 }
