@@ -8,13 +8,14 @@ public class AyudaExamen {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Introduce un texto para saber si es pangrama: ");
-		boolean pangrama = false;
+		
 		String textoUsu = scanner.nextLine();
 		
-		String RegexPattern = "^[a-zA-Z-Ññ]+$";
-		if(textoUsu.matches(RegexPattern)) {
-			textoUsu.equalsIgnoreCase(RegexPattern);
-		}
+		String RegexPattern = textoUsu.replaceAll("^[a-zA-ZñÑ ,\\.]+$", "").toLowerCase();
+		
+		System.out.println(RegexPattern);
+		
 	}
 
 }
+ 
