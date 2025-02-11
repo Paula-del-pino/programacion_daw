@@ -1,6 +1,7 @@
 package Poo;
 
 public class Persona {
+	private static final String Charater = null;
 	// Atributos
 	 private String nombre;
 	 private int edad;
@@ -24,7 +25,7 @@ public class Persona {
 		 this.nombre = nombre;
 		 this.dni = generarDni();
 		 this.edad = edad;
-		 this.sexo = comprobarSexo();
+		 this.sexo = comprobarSexo(sexo);
 		 this.altura = 0d;
 		 this.peso = 0;
 	 }
@@ -64,15 +65,20 @@ public class Persona {
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
+
+	// Metodos de instancia
+	private char comprobarSexo(char sexo) {
+		char sexoFinal = 'N';
+		sexo = Character.toUpperCase(sexo);
+		if (sexo == 'H' || sexo == 'M') {
+			
+		}
+		return sexoFinal;
+	}
+	
 	private String generarDni() {
+		// 8 numeros y 1 letra
 		
 		return null;
 	}
-	// Metodos de instancia
-	private char comprobarSexo() {
-		
-		return 0;
-	}
-	
-
 }
