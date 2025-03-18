@@ -15,11 +15,11 @@ public class TestSupermercado {
 		products[1] = pu2;
 		"".equals("");
 		double importeTotal = 0d;
-		System.out.println("TICKET DE LA COMPRA \t Cliente: " + cliente + "\t Nombre del producto:" );
+		System.out.println("TICKET DE LA COMPRA \t Cliente: " + cliente);
 		for (ProductoUnitario productoUnitario : products) {
 			importeTotal += productoUnitario.getImporteTotal();
 			productoUnitario.imprimir();
 		}
-		System.out.println("Importe total \t\t\t\t ");
+		System.out.printf("Importe total \t\t\t\t %.2f", importeTotal);
 	}
 } 

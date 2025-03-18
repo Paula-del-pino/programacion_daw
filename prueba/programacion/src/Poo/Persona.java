@@ -2,7 +2,7 @@ package Poo;
 
 import java.util.Random;
 
-public class Persona {
+public class Persona implements Comparable<Persona>{
 	private static final String LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE";
 	// Atributos
 	 private String nombre;
@@ -126,6 +126,17 @@ public class Persona {
 			pesoIdeal = 1;
 		}
 		return pesoIdeal;
+	}
+
+	@Override
+	public int compareTo(Persona o) {
+		int result = 0;
+		if (this.edad < o.edad) {
+			result = -1;
+		}else if (this.edad>o.edad) {
+			result = 1;
+		}
+		return result ;
 	}
 	
 	
