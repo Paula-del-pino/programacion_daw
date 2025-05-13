@@ -267,4 +267,9 @@ public class Persona implements Comparable<Persona> {
 		return this.edad - o.edad;
 	}
 
+	public void mostrarInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

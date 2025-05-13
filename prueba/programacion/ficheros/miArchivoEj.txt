@@ -1,0 +1,2 @@
+Productos;Precio
+[TOMATE, AVENA];[8.6, 1.4]

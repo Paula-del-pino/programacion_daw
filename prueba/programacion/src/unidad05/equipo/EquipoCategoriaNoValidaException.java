@@ -1,10 +1,11 @@
 package unidad05.equipo;
 
-public class EquipoCategoriaNoValidaException extends Exception {
+public class EquipoCategoriaNoValidaException extends EquipoException {
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -2805837869249754410L;
 
 	public EquipoCategoriaNoValidaException() {
 		// TODO Auto-generated constructor stub
@@ -14,5 +15,6 @@ public class EquipoCategoriaNoValidaException extends Exception {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
+
 
 }

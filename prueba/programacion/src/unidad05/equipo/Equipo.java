@@ -18,17 +18,29 @@ public class Equipo {
 	private char categoria;
 
 	/**
+	 * Constructor por defecto
+	 */
+	public Equipo() {
+		this.nombre = "";
+		this.cif = "";
+		this.fechaFundacion = null;
+		this.masCienAbonados = false;
+		this.categoria = '0';
+	}
+
+	/**
 	 * @param nombre
 	 * @param cif
 	 * @param fechaFundacion
 	 * @param masCienAbonados
 	 * @param categoria
-	 * @throws EquipoCategoriaNoValidaException 
-	 * @throws EquipoCifNoValidoException 
+	 * @throws EquipoCategoriaNoValidaException
+	 * @throws EquipoCifNoValidoException
 	 */
-	public Equipo(String nombre, String cif, LocalDate fechaFundacion, boolean masCienAbonados, char categoria) throws EquipoCategoriaNoValidaException, EquipoCifNoValidoException {
+	public Equipo(String nombre, String cif, LocalDate fechaFundacion, boolean masCienAbonados, char categoria)
+			throws EquipoCategoriaNoValidaException, EquipoCifNoValidoException {
 		this.nombre = nombre;
-		if (Utilidades.checkCif(cif)) {			
+		if (Utilidades.checkCif(cif)) {
 			this.cif = cif;
 		} else {
 			throw new EquipoCifNoValidoException("El cif no es correcto");
@@ -38,7 +50,6 @@ public class Equipo {
 		this.categoria = this.checkCategoria(categoria);
 		numeroEquipos++;
 	}
-	
 
 	/**
 	 * @return the nombre
@@ -47,14 +58,12 @@ public class Equipo {
 		return nombre;
 	}
 
-
 	/**
 	 * @param nombre the nombre to set
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 
 	/**
 	 * @return the cif
@@ -63,14 +72,17 @@ public class Equipo {
 		return cif;
 	}
 
-
 	/**
 	 * @param cif the cif to set
+	 * @throws EquipoCifNoValidoException 
 	 */
-	public void setCif(String cif) {
-		this.cif = cif;
+	public void setCif(String cif) throws EquipoCifNoValidoException {
+		if (Utilidades.checkCif(cif)) {
+			this.cif = cif;
+		} else {
+			throw new EquipoCifNoValidoException("El cif no es correcto");
+		}
 	}
-
 
 	/**
 	 * @return the fechaFundacion
@@ -79,14 +91,12 @@ public class Equipo {
 		return fechaFundacion;
 	}
 
-
 	/**
 	 * @param fechaFundacion the fechaFundacion to set
 	 */
 	public void setFechaFundacion(LocalDate fechaFundacion) {
 		this.fechaFundacion = fechaFundacion;
 	}
-
 
 	/**
 	 * @return the masCienAbonados
@@ -95,14 +105,12 @@ public class Equipo {
 		return masCienAbonados;
 	}
 
-
 	/**
 	 * @param masCienAbonados the masCienAbonados to set
 	 */
 	public void setMasCienAbonados(boolean masCienAbonados) {
 		this.masCienAbonados = masCienAbonados;
 	}
-
 
 	/**
 	 * @return the categoria
@@ -111,20 +119,26 @@ public class Equipo {
 		return categoria;
 	}
 
-
 	/**
 	 * @param categoria the categoria to set
+	 * @throws EquipoCategoriaNoValidaException 
 	 */
-	public void setCategoria(char categoria) {
-		this.categoria = categoria;
+	public void setCategoria(char categoria) throws EquipoCategoriaNoValidaException {
+		this.categoria = this.checkCategoria(categoria);
 	}
-
 
 	/**
 	 * @return the numeroEquipos
 	 */
 	public static int getNumeroEquipos() {
 		return numeroEquipos;
+	}
+	
+	/**
+	 * Decrementa en uno el número de equipos
+	 */
+	public static void decrementarEquipos() {
+		numeroEquipos--;
 	}
 
 	@Override
@@ -186,24 +200,25 @@ public class Equipo {
 		return result;
 	}
 
-	public boolean equals(Equipo otroEquipo) {
+	@Override
+	public boolean equals(Object otroEquipo) {
 		boolean equals = false;
-		if (null != this.nombre && this.nombre.equals(otroEquipo.nombre) && this.categoria == otroEquipo.categoria) {
-			equals = true;
+		if (null != otroEquipo) {
+			if (this == otroEquipo) {
+				equals = true;
+			} else {
+				if (otroEquipo instanceof Equipo) {
+					Equipo otro = (Equipo) otroEquipo;
+					if (null != this.nombre && this.nombre.equals(otro.nombre) && this.categoria == otro.categoria) {
+						equals = true;
+					}
+				} else {
+					equals = false;
+				}
+
+			}
 		}
 		return equals;
 	}
 
-
-	public void setFechaFundacion(String fechaFundacion2) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public void setNumeroAbonados(int numeroAbonados) {
-		// TODO Auto-generated method stub
-		
-	}
 }
-  
