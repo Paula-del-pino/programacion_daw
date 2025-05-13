@@ -10,17 +10,18 @@ public class Practica {
 		 Scanner scan = new Scanner(System.in);
 		 productos.put("TOMATE", 8.6f);
 		 productos.put("AVENA", 1.4f);
-		 String ruta = "ficheros/miArchivoEj.txt";
+		 String ruta = "ficheros/miArchivoEj.txt"; //Si no existe te crea el fichero
 		 try {
 			 
 			BufferedWriter bw = new BufferedWriter(new FileWriter(ruta));
-			bw.write("Productos;Precio" + "\n");
-			bw.write(productos.keySet() + ";" + productos.values());
-			bw.close();
-		} catch (IOException e) {
-			System.out.println("No se encuentra este archivo");
+			bw.write("Productos;Precio" + "\n"); //Salto de linea con \n
+			for (String producto : productos.keySet()) {
+                bw.write(producto + ";" + productos.get(producto) + "\n");
+			}
+			bw.close(); //Siempre cerrar el BufferedWriter con su nombre
+		} catch (IOException e) { 
+			System.out.println("No se encuentra este archivo"); 
 			System.err.println(e.getMessage());
 		}
-		 
 	}
 }
